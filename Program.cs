@@ -19,11 +19,6 @@ namespace KoalaSupport_task12
             {
                 for (int columnOfFirstZ = 0; columnOfFirstZ < 8; columnOfFirstZ++)
                 {
-                    if (rowOfFirstZ == 7 && columnOfFirstZ == 0)
-                    {
-                        Console.WriteLine(ogrod[rowOfFirstZ, columnOfFirstZ]);
-                        Console.WriteLine(Check(ogrod, rowOfFirstZ, columnOfFirstZ, 'z'));
-                    }
                     if (Check(ogrod, rowOfFirstZ, columnOfFirstZ, 'z'))
                     {
                         ogrod[rowOfFirstZ, columnOfFirstZ] = 'z';
@@ -45,21 +40,27 @@ namespace KoalaSupport_task12
                                         {
                                             if (Check(ogrod, i, j, 'f'))
                                             {
+                                                ogrod[i, j] = 'f';
                                                 counter++;
+                                                // DisplayGarden(ogrod);
+                                                // Console.WriteLine("===========================");
+                                                ogrod[i, j] = ' ';
                                             }
                                         }
                                     }
+                                    ogrod[rowOfSecondZ, columnOfSecondZ] = ' ';
                                 }
-                                ogrod[rowOfSecondZ, columnOfSecondZ] = ' ';
+                                
                             }
                         }
+                        ogrod[rowOfFirstZ, columnOfFirstZ] = ' ';
                     }
-                    ogrod[rowOfFirstZ, columnOfFirstZ] = ' ';
+                    
                 }
             }
 
             
-            DisplayList(wykorzystane);
+            // DisplayList(wykorzystane);
             Console.WriteLine($"Ilość możliwości: {counter}");
             //
             // ogrod[0, 0] = 'z';
