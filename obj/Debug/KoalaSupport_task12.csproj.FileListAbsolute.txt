@@ -1,0 +1,6 @@
+C:\Users\wikto\RiderProjects\KoalaSupport_task12\KoalaSupport_task12\bin\Debug\KoalaSupport_task12.exe
+C:\Users\wikto\RiderProjects\KoalaSupport_task12\KoalaSupport_task12\bin\Debug\KoalaSupport_task12.pdb
+C:\Users\wikto\RiderProjects\KoalaSupport_task12\KoalaSupport_task12\obj\Debug\KoalaSupport_task12.csproj.AssemblyReference.cache
+C:\Users\wikto\RiderProjects\KoalaSupport_task12\KoalaSupport_task12\obj\Debug\KoalaSupport_task12.csproj.CoreCompileInputs.cache
+C:\Users\wikto\RiderProjects\KoalaSupport_task12\KoalaSupport_task12\obj\Debug\KoalaSupport_task12.exe
+C:\Users\wikto\RiderProjects\KoalaSupport_task12\KoalaSupport_task12\obj\Debug\KoalaSupport_task12.pdb
