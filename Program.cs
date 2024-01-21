@@ -27,9 +27,9 @@ namespace KoalaSupport_task12
                     if (Check(ogrod, rowOfFirstZ, columnOfFirstZ, 'z'))
                     {
                         ogrod[rowOfFirstZ, columnOfFirstZ] = 'z';
-                        for (int rowOfSecondZ = 0; rowOfSecondZ < 8; rowOfSecondZ++)
+                        for (int rowOfSecondZ = rowOfFirstZ; rowOfSecondZ < 8; rowOfSecondZ++)
                         {
-                            for (int columnOfSecondZ = 0; columnOfSecondZ < 8; columnOfSecondZ++)
+                            for (int columnOfSecondZ = columnOfFirstZ+1; columnOfSecondZ < 8; columnOfSecondZ++)
                             {
                                 // int[] test = new int[] { rowOfFirstZ, columnOfFirstZ, rowOfFirstZ, columnOfFirstZ };
                                 // Console.WriteLine(wykorzystane.Contains(test));
