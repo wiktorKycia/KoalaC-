@@ -8,9 +8,6 @@ namespace KoalaSupport_task12
         public static void Main(string[] args)
         {
             char[,] ogrod = new char[8, 8];
-            // int niebieskie = 60;
-            // int fioletowe = 1;
-            // int zolte = 2;
             ogrod = FillGarden(ogrod, ' ');
             List<string> wykorzystane = new List<string>();
             int counter = 0;
@@ -27,15 +24,9 @@ namespace KoalaSupport_task12
                         {
                             for (int columnOfSecondZ = 0; columnOfSecondZ < 8; columnOfSecondZ++)
                             {
-                                
-                                // Console.WriteLine(wykorzystane.Contains(test));
-                                
-                                if (Check(ogrod, rowOfSecondZ, columnOfSecondZ, 'z') /*&& !(wykorzystane.Contains(test))*/)
+                                if (Check(ogrod, rowOfSecondZ, columnOfSecondZ, 'z'))
                                 {
                                     ogrod[rowOfSecondZ, columnOfSecondZ] = 'z';
-                                    // Console.WriteLine("I'm in the if");
-                                    
-                                    
                                     for (int i = 0; i < 8; i++)
                                     {
                                         for (int j = 0; j < 8; j++)
