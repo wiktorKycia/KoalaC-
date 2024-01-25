@@ -12,9 +12,9 @@ namespace KoalaSupport_task12
             // int fioletowe = 1;
             // int zolte = 2;
             ogrod = FillGarden(ogrod, ' ');
-            List<int[]> wykorzystane = new List<int[]>();
+            List<string> wykorzystane = new List<string>();
             int counter = 0;
-            int[] test;
+            string test;
 
             for (int rowOfFirstZ = 0; rowOfFirstZ < 8; rowOfFirstZ++)
             {
@@ -23,9 +23,9 @@ namespace KoalaSupport_task12
                     if (Check(ogrod, rowOfFirstZ, columnOfFirstZ, 'z'))
                     {
                         ogrod[rowOfFirstZ, columnOfFirstZ] = 'z';
-                        for (int rowOfSecondZ = rowOfFirstZ; rowOfSecondZ < 8; rowOfSecondZ++)
+                        for (int rowOfSecondZ = 0; rowOfSecondZ < 8; rowOfSecondZ++)
                         {
-                            for (int columnOfSecondZ = columnOfFirstZ; columnOfSecondZ < 8; columnOfSecondZ++)
+                            for (int columnOfSecondZ = 0; columnOfSecondZ < 8; columnOfSecondZ++)
                             {
                                 
                                 // Console.WriteLine(wykorzystane.Contains(test));
@@ -34,16 +34,18 @@ namespace KoalaSupport_task12
                                 {
                                     ogrod[rowOfSecondZ, columnOfSecondZ] = 'z';
                                     // Console.WriteLine("I'm in the if");
-                                    wykorzystane.Add(new int[]{rowOfFirstZ, columnOfFirstZ, rowOfSecondZ, columnOfSecondZ});
+                                    
                                     
                                     for (int i = 0; i < 8; i++)
                                     {
                                         for (int j = 0; j < 8; j++)
                                         {
-                                            test = new int[] { rowOfFirstZ, columnOfFirstZ, rowOfFirstZ, columnOfFirstZ, i, j };
+                                            test = $"{rowOfFirstZ} {columnOfFirstZ} {rowOfFirstZ} {columnOfFirstZ} {i} {j}";
+                                            
                                             // Console.Write(wykorzystane.Contains(test)+" ");
                                             if (Check(ogrod, i, j, 'f') && !wykorzystane.Contains(test))
                                             {
+                                                wykorzystane.Add(test);
                                                 ogrod[i, j] = 'f';
                                                 counter++;
                                                 // DisplayGarden(ogrod);
