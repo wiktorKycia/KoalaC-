@@ -14,6 +14,7 @@ namespace KoalaSupport_task12
             ogrod = FillGarden(ogrod, ' ');
             List<int[]> wykorzystane = new List<int[]>();
             int counter = 0;
+            int[] test;
 
             for (int rowOfFirstZ = 0; rowOfFirstZ < 8; rowOfFirstZ++)
             {
@@ -26,8 +27,9 @@ namespace KoalaSupport_task12
                         {
                             for (int columnOfSecondZ = columnOfFirstZ+1; columnOfSecondZ < 8; columnOfSecondZ++)
                             {
-                                // int[] test = new int[] { rowOfFirstZ, columnOfFirstZ, rowOfFirstZ, columnOfFirstZ };
+                                
                                 // Console.WriteLine(wykorzystane.Contains(test));
+                                
                                 if (Check(ogrod, rowOfSecondZ, columnOfSecondZ, 'z') /*&& !(wykorzystane.Contains(test))*/)
                                 {
                                     ogrod[rowOfSecondZ, columnOfSecondZ] = 'z';
@@ -38,7 +40,9 @@ namespace KoalaSupport_task12
                                     {
                                         for (int j = 0; j < 8; j++)
                                         {
-                                            if (Check(ogrod, i, j, 'f'))
+                                            test = new int[] { rowOfFirstZ, columnOfFirstZ, rowOfFirstZ, columnOfFirstZ, i, j };
+                                            // Console.Write(wykorzystane.Contains(test)+" ");
+                                            if (Check(ogrod, i, j, 'f') && !wykorzystane.Contains(test))
                                             {
                                                 ogrod[i, j] = 'f';
                                                 counter++;
